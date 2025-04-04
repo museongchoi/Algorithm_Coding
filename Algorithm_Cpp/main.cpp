@@ -46,7 +46,7 @@ void InsertionSort_01(vector<int> vec)
 	// tmp : 임시 저장 값. ? j : 마지막 진행 idx.
 	int tmp, endidx;
 
-	for (int i = 1; i < T; i++)
+	for (int i = 1; i < vec.size(); i++)
 	{
 		tmp = vec[i];
 
