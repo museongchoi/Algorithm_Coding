@@ -41,34 +41,52 @@ void SelectionSort(vector<int> vec)
 }
 
 // 삽입 정렬
-void InsertionSort(vector<int> vec)
+void InsertionSort_01(vector<int> vec)
 {
-	int k, j;
+	// tmp : 임시 저장 값. ? j : 마지막 진행 idx.
+	int tmp, endidx;
+
 	for (int i = 1; i < T; i++)
 	{
-		k = vec[i];
+		tmp = vec[i];
 
 		// 앞에서부터 이동하며 앞에 값이 자신보다 크면 뒤로 미룬다
 		// idx 1부터 시작 앞에 값을 비교 해야 하기 때문이다
-		for (j = i - 1; j >= 0; j--) // for (j = i - 1; j >= 0 && k < arr[j]; j--)
+		for (endidx = i - 1; endidx >= 0; endidx--)
 		{
-			// k 값과 비교하여 앞에 값이 크면 뒤로 미룬다
-			if (k < vec[j])
+			// tmp 값과 비교하여 앞에 값이 크면 뒤로 미룬다
+			if (tmp < vec[endidx])
 			{
-				vec[j + 1] = vec[j];
+				vec[endidx + 1] = vec[endidx];
 			}
 			else
 			{
 				break;
 			}
-
 		}
-
-		// j 는 위 for 문을 빠져 나오기 위해 앞으로 한번 이동 한 상태이다.
-		// 이때 vec[j] 에 있는 값은 for 문의 조건에 의해 이미 작은값이므로 +1 하여 알맞은 자리에 k 를 저장.
-		vec[j + 1] = k;
+		// for 문이 종료 된 시점에서 j 는 앞으로 한칸 이동한 상태.
+		// tmp 의 위치를 가기 위해서는 마지막 최소값 위치로 가야한다. 그러므로 j + 1.
+		vec[endidx + 1] = tmp;
 	}
+	Display(vec);
+}
 
+void InsertionSort_02(vector<int> vec)
+{
+	// tmp : 임시 저장 값. ? endidx : 마지막 진행 idx.
+	int tmp, endidx;
+
+	for (int i = 1; i < T; i++)
+	{
+		tmp = vec[i];
+		for (endidx = i - 1; endidx >= 0 && tmp < vec[endidx]; endidx--)
+		{
+			vec[endidx + 1] = vec[endidx];
+		}
+		// for 문이 종료 된 시점에서 j 는 앞으로 한칸 이동한 상태.
+		// tmp 의 위치를 가기 위해서는 마지막 최소값 위치로 가야한다. 그러므로 j + 1.
+		vec[endidx + 1] = tmp;
+	}
 	Display(vec);
 }
 
@@ -113,7 +131,10 @@ int main()
 	SelectionSort(vec);
 	cout << endl;
 
-	InsertionSort(vec);
+	InsertionSort_01(vec);
+	cout << endl;
+
+	InsertionSort_02(vec);
 	cout << endl;
 
 	BubbleSort(vec);
