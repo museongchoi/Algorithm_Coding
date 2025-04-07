@@ -98,26 +98,25 @@ void InsertionSort_02(vector<int> vec)
 // 가장 큰 값은 맨 끝 자리에 가기에 매 반복마다 끝 자리는 다시 확인하지 않는다.
 void BubbleSort(vector<int> vec)
 {
-	int t = T;
-	int k = 0;
+	int loop_cnt = vec.size();
+	int tmp = 0;
 
-	while (t != 1)
+	while (loop_cnt != 1)
 	{
-		for (int i = 0; i < t - 1; i++)
+		for (int i = 0; i < loop_cnt - 1; i++)
 		{
 			Display(vec);
 			cout << " / ";
 
 			if (vec[i] > vec[i + 1])
 			{
-				k = vec[i + 1];
+				tmp = vec[i + 1];
 				vec[i + 1] = vec[i];
-				vec[i] = k;
+				vec[i] = tmp;
 			}
 		}
-		t--;
+		loop_cnt--;
 	}
-
 }
 
 int main()
