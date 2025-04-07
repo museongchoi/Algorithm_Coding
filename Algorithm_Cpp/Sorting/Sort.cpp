@@ -14,27 +14,29 @@ void Display(vector<int> vec)
 }
 
 // 선택 정렬
+// 가장 작은 값을 찾고 맨 앞에서부터 차례대로 교환한다
 void SelectionSort(vector<int> vec)
 {
-	int min, minidx = 0, swapnum = 0;
+	int tmp, min_val, min_idx;
 
-	for (int i = 0; i < T; i++)
+	for (int i = 0; i < vec.size(); i++)
 	{
-		min = 9999;
+		// 초기화: 현재 인덱스를 최소값 인덱스로 설정
+		min_val = vec[i];
+		min_idx = i;
 
-		for (int j = i; j < T; j++)
+		for (int j = i + 1; j < vec.size(); j++)
 		{
-			if (vec[j] < min)
+			if (min_val > vec[j])
 			{
-				min = vec[j];
-				minidx = j;
+				min_val = vec[j];
+				min_idx = j;
 			}
 		}
-
-		//swap
-		swapnum = vec[minidx];
-		vec[minidx] = vec[i];
-		vec[i] = swapnum;
+		// 찾은 최소값과 현재 값을 교환
+		tmp = vec[min_idx];
+		vec[min_idx] = vec[i];
+		vec[i] = tmp;
 	}
 
 	Display(vec);
