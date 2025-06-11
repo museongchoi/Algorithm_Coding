@@ -3,16 +3,19 @@
   "WorkspaceRootPath": "D:\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\GitHub\\Algorithm_Coding\\Structure\\Array.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|D:\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|D:\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|D:\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\output.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:output.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|D:\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +25,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Array.cpp",
+              "DocumentMoniker": "D:\\GitHub\\Algorithm_Coding\\Structure\\Array.cpp",
+              "RelativeDocumentMoniker": "..\\Structure\\Array.cpp",
+              "ToolTip": "D:\\GitHub\\Algorithm_Coding\\Structure\\Array.cpp",
+              "RelativeToolTip": "..\\Structure\\Array.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-11T09:51:58.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\main.cpp",
               "RelativeDocumentMoniker": "main.cpp",
@@ -39,7 +55,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "output.txt",
               "DocumentMoniker": "D:\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\output.txt",
               "RelativeDocumentMoniker": "output.txt",
@@ -47,12 +63,11 @@
               "RelativeToolTip": "output.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-03-21T09:41:11.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-21T09:41:11.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "input.txt",
               "DocumentMoniker": "D:\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\input.txt",
               "RelativeDocumentMoniker": "input.txt",
