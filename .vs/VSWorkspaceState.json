@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Algorithm_Cpp"
+    "\\Algorithm_Cpp",
+    "\\Sorting",
+    "\\Structure"
   ],
+  "SelectedNode": "\\Algorithm_Cpp\\main.cpp",
   "PreviewInSolutionExplorer": false
 }

@@ -1,48 +1,43 @@
 #include <iostream>
 using namespace std;
 
-struct Node
-{
-	int data;
-	Node* next;
-	Node(int v) : data(v), next(nullptr) {}
+struct Node {
+	int data;	// 저장할 값
+	Node* link;	// 다음 노드 포인터
+	Node(int v, Node* nxt = nullptr) 
+		: data(v), link(nxt) {}
 };
 
-// 리스트 앞에 삽입 (double_pointer 버전)
-void push_front(Node** head_ref, int value) 
+/*  
+	노드 삽입 : head 포인터를 참조로 받아 수정
+	p == nullptr 이면 맨 앞, 그 외엔 p 다음에 삽입
+*/
+InsertNode(Node*& head, Node* p, Node* newNode)
 {
-	Node* newNode = new Node(value);
-
-	// 새 노드의 next 가 기존 head 를 가르키도록
-	newNode->next = *head_ref;
-
-	*head_ref = newNode;
-}
-
-void printList(Node* head)
-{
-	
-}
-
-void freeList(Node* head)
-{
-
+	if (head == nullptr)
+	{
+		// 빈 리스트 일때
+		head = newNode;
+	}
+	else if (p == nullptr) {
+		// 맨 앞에 삽입
+		newNode->link = head;
+		head = newNode;
+	}
 }
 
 int main()
 {
-	Node* head = nullptr;	// 빈 리스트
+	Node* list1 = nullptr;
+	Node* list2 = nullptr;
+	Node* list3 = nullptr;
 
-	// push_front 호출 시 &head (Node**) 를 넘겨준다
-	push_front(&head, 10);
-	push_front(&head, 20);
-	push_front(&head, 30);
-	// 리스트 30 -> 20 -> 10
-
-	cout << "Linked List";
-	printList(head);	// 출력 : 30 20 10
-
-	freeList(head);
+	// 1~3을 list1, 10~30을 list2 맨 앞 삽입
+	for (int i = 0; i <= 3; i++)
+	{
+		InsertNode(list1, nullptr, new Node(i));
+		InsertNode()
+	}
 
 	return 0;
 }
