@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-Sort",
+      "appliesTo": "Sorting/Sort.cpp",
+      "type": "launch"
+    }
+  ]
+}
