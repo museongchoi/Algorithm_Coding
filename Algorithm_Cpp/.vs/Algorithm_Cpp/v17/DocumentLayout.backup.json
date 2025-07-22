@@ -22,21 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAEwA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-08T06:11:13.335Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -45,9 +32,10 @@
               "RelativeDocumentMoniker": "output.txt",
               "ToolTip": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\output.txt",
               "RelativeToolTip": "output.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-03-21T09:41:11.028Z"
+              "WhenOpened": "2025-03-21T09:41:11.028Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -59,7 +47,21 @@
               "RelativeToolTip": "input.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-03-21T09:40:28.048Z"
+              "WhenOpened": "2025-03-21T09:40:28.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAEcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-08T06:11:13.335Z",
+              "EditorCaption": ""
             }
           ]
         }
