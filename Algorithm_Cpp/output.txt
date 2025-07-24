@@ -1,7 +1,13 @@
-3 2 1 4 
-30 20 10 
-
-2 1 4 
-30 10 
-
-2 1 4 30 10 
+main start : a = 10 | &a = 000000F1C30FFA74
+ 
+PassByValue x : 10 | &x : 000000F1C30FFA50
+PassByValue [after] x = 100: x = 100
+after PassByValue, a = 10
+ 
+PassByPointer p : 000000F1C30FFA74 | *p : 10
+PassByPointer [after] *p = 200: *p = 200
+after PassByPointer, a = 200
+ 
+PassByReference r: 200 | &r : 000000F1C30FFA74
+PassByReference [after] r = 300: r = 300
+after PassByReference, a = 300
