@@ -7,24 +7,16 @@
       "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\10953.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:10953.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\8393.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:8393.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\output.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:output.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\1000.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:1000.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\input.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:input.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\10951.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{EFADB36E-B25F-4766-BC61-DDEE42E6F90B}|Algorithm_Cpp.vcxproj|solutionrelative:10951.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,32 +26,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "10953.cpp",
-              "DocumentMoniker": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\10953.cpp",
-              "RelativeDocumentMoniker": "10953.cpp",
-              "ToolTip": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\10953.cpp",
-              "RelativeToolTip": "10953.cpp",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACcAAAABAAAAAAAAAA==",
+              "Title": "8393.cpp",
+              "DocumentMoniker": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\8393.cpp",
+              "RelativeDocumentMoniker": "8393.cpp",
+              "ToolTip": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\8393.cpp",
+              "RelativeToolTip": "8393.cpp",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-30T08:00:42.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "1000.cpp",
-              "DocumentMoniker": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\1000.cpp",
-              "RelativeDocumentMoniker": "1000.cpp",
-              "ToolTip": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\1000.cpp",
-              "RelativeToolTip": "1000.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-30T07:55:13.435Z",
+              "WhenOpened": "2025-07-30T09:07:26.633Z",
               "EditorCaption": ""
             },
             {
@@ -70,22 +49,9 @@
               "RelativeDocumentMoniker": "main.cpp",
               "ToolTip": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\main.cpp",
               "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-08T06:11:13.335Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "10951.cpp",
-              "DocumentMoniker": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\10951.cpp",
-              "RelativeDocumentMoniker": "10951.cpp",
-              "ToolTip": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\10951.cpp",
-              "RelativeToolTip": "10951.cpp",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwCgAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-30T07:42:30.358Z",
               "EditorCaption": ""
             },
             {
@@ -96,20 +62,20 @@
               "RelativeDocumentMoniker": "output.txt",
               "ToolTip": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\output.txt",
               "RelativeToolTip": "output.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-03-21T09:41:11.028Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "input.txt",
               "DocumentMoniker": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\input.txt",
               "RelativeDocumentMoniker": "input.txt",
               "ToolTip": "C:\\Users\\antjd\\Documents\\GitHub\\Algorithm_Coding\\Algorithm_Cpp\\input.txt",
               "RelativeToolTip": "input.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-03-21T09:40:28.048Z",
               "EditorCaption": ""
