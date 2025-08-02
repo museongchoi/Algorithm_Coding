@@ -1,2 +1,1 @@
-5
-20 10 35 30 7
+The last character is a blank 
