@@ -1,1 +1,2 @@
-The last character is a blank 
+1
+2
