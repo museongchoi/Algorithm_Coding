@@ -18,10 +18,10 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="SelectionSort.cpp">
+    <ClCompile Include="10992.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="InsertionSort.cpp">
+    <ClCompile Include="10991.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

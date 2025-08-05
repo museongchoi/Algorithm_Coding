@@ -13,13 +13,14 @@ int main()
 		{
 			cout << " ";
 		}
+		// 별 출력 후 공백 + 별로 idx 에 맞게 출력
 		cout << "*";
 		for (int k = 0; k < i; k++)
 		{
 			cout << " " << "*";
 		}
 		cout << endl;
-		
+
 	}
 	return 0;
 }
