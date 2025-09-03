@@ -18,7 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ShellSort.cpp">
+    <ClCompile Include="MergeSort.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
