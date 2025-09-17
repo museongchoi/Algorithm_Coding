@@ -1,0 +1,2 @@
+Front : 1
+Front after pop : 2
