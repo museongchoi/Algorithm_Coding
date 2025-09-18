@@ -19,9 +19,19 @@ private:
 	Node* rear;
 
 public:
+	// 생성자 : 생성자 본문에서 대입(assignment)
+	/*
 	Queue() {
 		front = nullptr;
 		rear = nullptr;
+	}
+	*/
+	// 생성자 : 멤버 이니셜라이저 리스트(초기화)
+	Queue() : front(nullptr), rear(nullptr) {}
+
+	// 소멸자 : 남아있는 노드 모두 해제
+	~Queue() {
+		clear();
 	}
 
 	bool isEmpty()
@@ -57,6 +67,7 @@ public:
 		if (isEmpty())
 		{
 			cout << "Queue is empty, cannot dequeue. " << endl;
+			return;
 		}
 
 		// q 가 비어있지 않다면 tmp 가 front 를 저장 -> front 위치 변경
@@ -64,19 +75,41 @@ public:
 		Node* tmp = front;
 		front = front->link;
 		delete tmp;
+
+		if (front == nullptr)
+		{
+			// 마지막 노드를 제거했다면 rear 도 nullptr 동기화
+			rear = nullptr;
+		}
 	}
 
 	// q의 맨 앞 data 확인
 	element peek()
 	{
-		if (!isEmpty())
+		if (isEmpty())
 		{
-			return front->data;
+			// q가 비어있다면 
+			cout << "Queue is empty." << endl;
+			return -1;
 		}
-		// q가 비어있다면 
-		cout << "Queue is empty." << endl;
-		return -1;
+
+		return front->data;
 	}
+
+	void clear()
+	{
+		while (!isEmpty())
+		{
+			Node* tmp = front;
+			front = front->link;
+			delete tmp;
+		}
+		rear = nullptr;
+	}
+
+	// 얕은 복사 방지(선택): 필요 없으면 지워도 됨
+	Queue(const Queue&) = delete;
+	Queue& operator=(const Queue&) = delete;
 };
 
 int main()

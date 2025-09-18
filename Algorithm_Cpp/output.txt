@@ -1,2 +1,3 @@
-Front : 1
-Front after pop : 2
+30
+20
+10
