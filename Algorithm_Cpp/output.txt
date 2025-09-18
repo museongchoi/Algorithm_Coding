@@ -1,3 +1,10 @@
-30
-20
-10
+앞/뒤 조회 : 
+front: 2
+back: 20
+앞/뒤 삭제 : 
+pop_front: 2
+pop_back: 20
+남은 것 출력(앞에서부터) : 
+pop_front: 1
+pop_front: 10
+Deque is Empty, cannot pop_front
