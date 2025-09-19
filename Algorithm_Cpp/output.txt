@@ -1,10 +1,6 @@
-앞/뒤 조회 : 
-front: 2
-back: 20
-앞/뒤 삭제 : 
-pop_front: 2
-pop_back: 20
-남은 것 출력(앞에서부터) : 
-pop_front: 1
-pop_front: 10
-Deque is Empty, cannot pop_front
+Preorder  : 5 3 2 4 7 6 8 
+Inorder   : 2 3 4 5 6 7 8 
+Postorder : 2 4 3 6 8 7 5 
+Levelorder: 5 3 7 2 4 6 8 
+Search 6 : found
+After delete 7, inorder: 2 3 4 5 6 8 
