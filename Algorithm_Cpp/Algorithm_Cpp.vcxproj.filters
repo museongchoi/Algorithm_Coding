@@ -18,10 +18,10 @@
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="TreeOrder.cpp">
+    <ClCompile Include="Heap.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="BinarySearchTree.cpp">
+    <ClCompile Include="MinHeap.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
