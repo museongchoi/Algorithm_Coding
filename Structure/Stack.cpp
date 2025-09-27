@@ -40,9 +40,8 @@ public:
 	{
 		Node* newNode = new Node;
 		newNode->data = data;
-		newNode->link = nullptr; // 바로 top 으로 연결한다면 생략 가능
-
 		newNode->link = top;
+
 		top = newNode;
 	}
 
