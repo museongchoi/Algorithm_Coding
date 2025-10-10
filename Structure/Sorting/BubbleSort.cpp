@@ -1,4 +1,4 @@
-// array, tmp 사용 스위칭
+// array, 직접 변경
 #include <iostream>
 #include <array>
 
