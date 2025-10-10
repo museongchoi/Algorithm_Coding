@@ -1,5 +1,6 @@
+// sort()
 #include <iostream>
-#include <algorithm> // sort()
+#include <algorithm>
 using namespace std;
 
 int main()
@@ -18,15 +19,7 @@ int main()
 	return 0;
 }
 
-/*
-arrSize : 5
-1
-2
-3
-4
-5
-*/
-
+// 직접 변경
 #include <iostream>
 
 using namespace std;
