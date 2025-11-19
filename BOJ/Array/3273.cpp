@@ -83,16 +83,16 @@ int main()
 
 	for (int i = 0; i < n; ++i)
 	{
-		// 조건 : v + y == x
-		int v = arr[i];    // 현재 비교해야하는 값 v
-		int sum = x - v; // 합 x 에서 v 를 빼서 y 값을 구함
+		// 조건 : a + b == x
+		int a = arr[i];    // 현재 비교해야하는 값 v
+		int b = x - a; // 합 x 에서 v 를 빼서 y 값을 구함
 
 		// y 값이 배열에 존재한다면 한쌍 완성. 존재 유무를 arrcheck 배열 값으로 확인 하는 것.
-		if (sum > 0 && sum <= 1000000 && check[sum])
+		if (b > 0 && b <= 1000000 && check[b])
 		{
 			++answer;
 		}
-		check[v] = true;
+		check[a] = true;
 	}
 
 	cout << answer;
@@ -187,16 +187,16 @@ int main()
 
 	for (int i = 0; i < n; ++i)
 	{
-		// 조건 : v + y == x
-		int v = vec[i];    // 현재 비교해야하는 값 v
-		int sum = x - v; // 합 x 에서 v 를 빼서 y 값을 구함
+		// 조건 : a + b == x
+		int a = vec[i];    // 현재 비교해야하는 값 v
+		int b = x - a; // 합 x 에서 v 를 빼서 y 값을 구함
 
 		// y 값이 배열에 존재한다면 한쌍 완성. 존재 유무를 arrcheck 배열 값으로 확인 하는 것.
-		if (sum > 0 && sum <= MAXVal && check[sum])
+		if (b > 0 && b <= MAXVal && check[b])
 		{
 			++answer;
 		}
-		check[v] = 1;
+		check[a] = 1;
 	}
 
 	cout << answer;
