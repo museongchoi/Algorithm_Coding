@@ -1,4 +1,94 @@
-﻿#include <iostream>
+﻿// include stack
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+enum Cmd
+{
+	push,
+	pop,
+	size,
+	empty,
+	top,
+	unknown
+};
+
+static Cmd ToCmd(string st)
+{
+	if (st == "push") return Cmd::push;
+	if (st == "pop") return Cmd::pop;
+	if (st == "size") return Cmd::size;
+	if (st == "empty") return Cmd::empty;
+	if (st == "top") return Cmd::top;
+	return Cmd::unknown;
+}
+
+int main()
+{
+	int n;
+	cin >> n;
+
+	stack<int> st;
+
+	for (int i = 0; i < n; ++i)
+	{
+		string cmd;
+		cin >> cmd;
+
+		int num;
+		if (cmd == "push")
+		{
+			cin >> num;
+		}
+
+		switch (ToCmd(cmd))
+		{
+		case Cmd::push:
+			st.push(num);
+			break;
+		case Cmd::pop:
+		{
+			if (st.empty())
+			{
+				cout << -1 << "\n";
+			}
+			else
+			{
+				cout << st.top() << "\n";
+				st.pop();
+			}
+			break;
+		}
+		case Cmd::size:
+			cout << st.size() << "\n";
+			break;
+		case Cmd::empty:
+			cout << st.empty() << "\n";
+			break;
+		case Cmd::top:
+		{
+			if (st.empty())
+			{
+				cout << -1 << "\n";
+			}
+			else
+			{
+				cout << st.top() << "\n";
+			}
+			break;
+		}
+		default:
+			break;
+		}
+
+	}
+
+	return 0;
+}
+
+// stack 구현
+#include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
