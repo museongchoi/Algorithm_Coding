@@ -1,6 +1,7 @@
 ﻿// include stack
 #include <iostream>
 #include <stack>
+#include <string>
 
 using namespace std;
 
@@ -14,7 +15,7 @@ enum Cmd
 	unknown
 };
 
-static Cmd ToCmd(string st)
+static Cmd ToCmd(const string st)
 {
 	if (st == "push") return Cmd::push;
 	if (st == "pop") return Cmd::pop;
@@ -24,8 +25,50 @@ static Cmd ToCmd(string st)
 	return Cmd::unknown;
 }
 
+static void StartCmd(stack<int>& st, string& cmd, int num = -1)
+{
+	switch (ToCmd(cmd))
+	{
+	case Cmd::push:
+		st.push(num);
+		break;
+	case Cmd::pop:
+		if (st.empty())
+		{
+			cout << -1 << "\n";
+		}
+		else
+		{
+			cout << st.top() << "\n";
+			st.pop();
+		}
+		break;
+	case Cmd::size:
+		cout << st.size() << "\n";
+		break;
+	case Cmd::empty:
+		cout << st.empty() << "\n";
+		break;
+	case Cmd::top:
+		if (st.empty())
+		{
+			cout << -1 << "\n";
+		}
+		else
+		{
+			cout << st.top() << "\n";
+		}
+		break;
+	default:
+		break;
+	}
+}
+
 int main()
 {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
 	int n;
 	cin >> n;
 
@@ -36,52 +79,13 @@ int main()
 		string cmd;
 		cin >> cmd;
 
-		int num;
+		int num = -1;
 		if (cmd == "push")
 		{
 			cin >> num;
 		}
 
-		switch (ToCmd(cmd))
-		{
-		case Cmd::push:
-			st.push(num);
-			break;
-		case Cmd::pop:
-		{
-			if (st.empty())
-			{
-				cout << -1 << "\n";
-			}
-			else
-			{
-				cout << st.top() << "\n";
-				st.pop();
-			}
-			break;
-		}
-		case Cmd::size:
-			cout << st.size() << "\n";
-			break;
-		case Cmd::empty:
-			cout << st.empty() << "\n";
-			break;
-		case Cmd::top:
-		{
-			if (st.empty())
-			{
-				cout << -1 << "\n";
-			}
-			else
-			{
-				cout << st.top() << "\n";
-			}
-			break;
-		}
-		default:
-			break;
-		}
-
+		StartCmd(st, cmd, num);
 	}
 
 	return 0;

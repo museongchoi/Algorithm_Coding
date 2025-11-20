@@ -9,7 +9,6 @@ int main()
 {
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	cout.tie(nullptr);
 
 	int n; // 학생 수
 	int k; // 방 배정 최대 인원 수
