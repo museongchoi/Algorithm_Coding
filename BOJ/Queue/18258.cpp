@@ -13,21 +13,22 @@ struct Node
 class Queue
 {
 private:
-	Node* first;
-	Node* end;
+	Node* left;
+	Node* right;
 	int cnt;
 
+
 public:
-	Queue() : first(nullptr), end(nullptr), cnt(0) {}
+	Queue() : left(nullptr), right(nullptr), cnt(0) {}
 	~Queue()
 	{
-		while (first != nullptr)
+		while (left != nullptr)
 		{
-			Node* tmp = first;
-			first = first->link;
+			Node* tmp = left;
+			left = left->link;
 			delete tmp;
 		}
-		end = nullptr;
+		right = nullptr;
 		cnt = 0;
 	}
 
@@ -39,13 +40,13 @@ public:
 
 		if (empty())
 		{
-			first = newNode;
-			end = newNode;
+			left = newNode;
+			right = newNode;
 		}
 		else
 		{
-			end->link = newNode;
-			end = newNode;
+			right->link = newNode;
+			right = newNode;
 		}
 		++cnt;
 	}
@@ -57,18 +58,19 @@ public:
 		}
 		else
 		{
-			cout << first->data << "\n";
+			cout << left->data << "\n";
 
-			Node* tmp = first;
-			first = first->link;
+			Node* tmp = left;
+			left = left->link;
 			delete tmp;
 			--cnt;
 
-			if (first == nullptr)
+			if (left == nullptr)
 			{
-				end = nullptr;
+				right = nullptr;
 			}
 		}
+
 	}
 	void size() const
 	{
@@ -76,28 +78,28 @@ public:
 	}
 	bool empty() const
 	{
-		return first == nullptr;
+		return left == nullptr;
 	}
 	void front()
 	{
-		if (first == nullptr)
+		if (empty())
 		{
 			cout << -1 << "\n";
 		}
 		else
 		{
-			cout << first->data << "\n";
+			cout << left->data << "\n";
 		}
 	}
 	void back()
 	{
-		if (first == nullptr)
+		if (empty())
 		{
 			cout << -1 << "\n";
 		}
 		else
 		{
-			cout << end->data << "\n";
+			cout << right->data << "\n";
 		}
 	}
 };
@@ -194,35 +196,28 @@ int main()
 		}
 		else if (cmd == "empty")
 		{
-			if (que.empty())
-			{
-				cout << 1 << "\n";
-			}
-			else
-			{
-				cout << 0 << "\n";
-			}
+			cout << que.empty() << "\n";
 		}
 		else if (cmd == "front")
 		{
-			if (que.empty())
+			if (!que.empty())
 			{
-				cout << "-1" << "\n";
+				cout << que.front() << "\n";
 			}
 			else
 			{
-				cout << que.front() << "\n";
+				cout << -1 << "\n";
 			}
 		}
 		else if (cmd == "back")
 		{
-			if (que.empty())
+			if (!que.empty())
 			{
-				cout << "-1" << "\n";
+				cout << que.back() << "\n";
 			}
 			else
 			{
-				cout << que.back() << "\n";
+				cout << -1 << "\n";
 			}
 		}
 	}
