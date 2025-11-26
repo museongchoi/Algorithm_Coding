@@ -1,10 +1,10 @@
-// array, ¡˜¡¢ ∫Ø∞Ê
+Ôªø// array, ÏßÅÏ†ë Î≥ÄÍ≤Ω
 #include <iostream>
 #include <array>
 
 using namespace std;
 
-void Display(int Arr[], int ArrSize)
+static void Display(int Arr[], int ArrSize)
 {
 	for (int i = 0; i < ArrSize; i++)
 	{
@@ -13,27 +13,30 @@ void Display(int Arr[], int ArrSize)
 	cout << endl;
 }
 
-void BubbleSort(int Arr[], int ArrSize)
+static void BubbleSort(int Arr[], int ArrSize)
 {
+	if (ArrSize <= 1) return;
+
 	int tmp = 0;
-	bool Swaped;
+	bool Swapped;
 
-	for (int pass = 0; pass < ArrSize - 1; pass++)
+	for (int pass = 0; pass < ArrSize - 1; ++pass)
 	{
-		Swaped = false;
-		for (int i = 0; i < ArrSize - 1; i++)
-		{
-			Display(Arr, ArrSize);
+		Swapped = false;
+		Display(Arr, ArrSize);
 
+		for (int i = 0; i < ArrSize - 1 - pass; ++i)
+		{
 			if (Arr[i] > Arr[i + 1])
 			{
 				tmp = Arr[i];
 				Arr[i] = Arr[i + 1];
 				Arr[i + 1] = tmp;
+
+				Swapped = true;
 			}
-			Swaped = true;
 		}
-		if (!Swaped)
+		if (!Swapped)
 		{
 			break;
 		}
@@ -42,14 +45,17 @@ void BubbleSort(int Arr[], int ArrSize)
 
 int main()
 {
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
 	int arr[] = { 5, 3, 8, 1, 2, 7 };
 	int arrSize = size(arr);
 
-	cout << "¡§∑ƒ Ω√¿€ : " << endl;
+	cout << "Ï†ïÎ†¨ ÏãúÏûë : " << "\n";
 
 	BubbleSort(arr, arrSize);
 
-	cout << "¡§∑ƒ ≥° : " << endl;
+	cout << "Ï†ïÎ†¨ ÎÅù : " << "\n";
 
 	Display(arr, arrSize);
 
@@ -68,29 +74,29 @@ void Display(vector<int>& Vec)
 	{
 		cout << Vec[i] << " ";
 	}
-	cout << endl;
+	cout << "\n";
 }
 
 void BubbleSort(vector<int>& Vec)
 {
 	int tmp = 0;
-	bool Swaped;
+	bool Swapped;
 	int VecSize = Vec.size();
 
 	for (int pass = 0; pass < VecSize - 1; pass++)
 	{
-		Swaped = false;
+		Swapped = false;
 		for (int i = 0; i < VecSize - 1 - pass; i++)
 		{
 			Display(Vec);
 			if (Vec[i] > Vec[i + 1])
 			{
 				swap(Vec[i], Vec[i + 1]);
-				Swaped = true;
+				Swapped = true;
 
 			}
 		}
-		if (!Swaped)
+		if (!Swapped)
 		{
 			break;
 		}
@@ -102,11 +108,11 @@ int main()
 	vector<int> vec = { 5, 3, 8, 1, 2, 7 };
 
 	Display(vec);
-	cout << endl << "¡§∑ƒ Ω√¿€ : " << endl;
+	cout << endl << "Ï†ïÎ†¨ ÏãúÏûë : " << endl;
 
 	BubbleSort(vec);
 
-	cout << endl << "¡§∑ƒ ≥° : " << endl;
+	cout << endl << "Ï†ïÎ†¨ ÎÅù : " << endl;
 
 	Display(vec);
 

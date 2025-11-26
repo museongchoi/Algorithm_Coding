@@ -1,38 +1,44 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <vector>
 #include <algorithm>
 
 using namespace std;
 
-void Display(vector<int>& Vec)
+void Display(const vector<int>& Vec)
 {
-	for (int i = 0; i < Vec.size(); i++)
+	int n = Vec.size();
+	for (int i = 0; i < n; i++)
 	{
 		cout << Vec[i] << " ";
 	}
 	cout << endl;
 }
 
-// ¼±ÅÃ Á¤·Ä
-// °¡Àå ÀÛÀº °ªÀ» Ã£°í ¸Ç ¾Õ¿¡ºÎÅÍ Â÷·Ê´ë·Î ±³È¯ÇÑ´Ù
+// ì„ íƒ ì •ë ¬
+// ê°€ì¥ ì‘ì€ ê°’ì„ ì°¾ê³  ë§¨ ì•ì—ë¶€í„° ì°¨ë¡€ëŒ€ë¡œ êµí™˜í•œë‹¤
 void SelectionSort(vector<int>& Vec)
 {
-	int tmp, MinVal, MinIdx;
-	
-	// ¹è¿­ÀÇ °¢ ¿ä¼Ò¸¦ ºñ±³
-	for (int i = 0; i < Vec.size(); i++)
-	{
-		MinIdx = i;
+	int n = Vec.size();
 
-		// ÇöÀç ¿ä¼Ò i ¸¦ ±âÁØÀ¸·Î ³²Àº ¹è¿­¿¡¼­ °¡Àå ÀÛÀº °ªÀ» Ã£´Â´Ù.
-		for (int j = i + 1; j < Vec.size(); j++)
+	// ë°°ì—´ì˜ ê° ìš”ì†Œë¥¼ ë¹„êµ
+	for (int i = 0; i < n - 1; ++i)
+	{
+		int MinIdx = i;
+
+		// í˜„ì¬ ìš”ì†Œ i ë¥¼ ê¸°ì¤€ìœ¼ë¡œ ë‚¨ì€ ë°°ì—´ì—ì„œ ê°€ì¥ ì‘ì€ ê°’ì„ ì°¾ëŠ”ë‹¤.
+		for (int j = i + 1; j < n; ++j)
 		{
 			if (Vec[MinIdx] > Vec[j])
 			{
 				MinIdx = j;
 			}
 		}
-		swap(Vec[i], Vec[MinIdx]);
+
+		// MinIdx ì™€ i ê°’ì´ ê°™ìœ¼ë©´ ë°œê²¬í•˜ì§€ ëª»í•œ ê²ƒ.
+		if (MinIdx != i)
+		{
+			swap(Vec[i], Vec[MinIdx]);
+		}
 		Display(Vec);
 	}
 }
@@ -42,13 +48,86 @@ int main()
 	vector<int> vec = { 5, 3, 8, 1, 2, 7 };
 
 	Display(vec);
-	cout << endl << "Á¤·Ä ½ÃÀÛ : " << endl;
-	
+	cout << endl << "ì •ë ¬ ì‹œì‘ : " << endl;
+
 	SelectionSort(vec);
 
-	cout << endl << "Á¤·Ä ³¡ : " << endl;
-	
+	cout << endl << "ì •ë ¬ ë : " << endl;
+
 	Display(vec);
+
+	return 0;
+}
+
+// ì„ íƒ ì •ë ¬::ìˆ˜ë™ ìŠ¤ì™‘
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void Display(const vector<int>& vec)
+{
+	for (int v : vec)
+	{
+		cout << v << " ";
+	}
+	cout << "\n";
+}
+
+// ì„ íƒ ì •ë ¬
+// ê°€ì¥ ì‘ì€ ê°’ì„ ì°¾ê³  ë§¨ ì•ì—ì„œë¶€í„° ì°¨ë¡€ëŒ€ë¡œ êµí™˜í•œë‹¤
+void SelectionSort(vector<int>& vec)
+{
+	int n = vec.size();
+
+	for (int i = 0; i < n - 1; ++i)
+	{
+		// ì´ˆê¸°í™”: í˜„ì¬ ì¸ë±ìŠ¤ë¥¼ ìµœì†Œê°’ ì¸ë±ìŠ¤ë¡œ ì„¤ì •
+		int min_val = vec[i];
+		int min_idx = i;
+
+		// ê°€ì¥ ì‘ì€ ê°’ íƒìƒ‰
+		for (int j = i + 1; j < n; ++j)
+		{
+			if (min_val > vec[j])
+			{
+				min_val = vec[j];
+				min_idx = j;
+			}
+		}
+
+		// min_idx ì™€ i ê°’ì´ ê°™ë‹¤ë©´ í˜„ì¬ ê°’ë³´ë‹¤ ì‘ì€ ê°’ì„ ì°¾ì§€ ëª»í•œ ê²ƒ. ì¦‰, ìŠ¤ì™‘ ë°œìƒí•˜ì§€ ì•ŠìŒ.
+		if (min_idx != i)
+		{
+			// ì°¾ì€ ìµœì†Œê°’ê³¼ í˜„ì¬ ê°’ì„ êµí™˜
+			int tmp = vec[min_idx];
+			vec[min_idx] = vec[i];
+			vec[i] = tmp;
+		}
+
+		Display(vec);
+	}
+}
+
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
+	int T;
+	cin >> T;
+	vector<int> vec(T);
+
+	for (int i = 0; i < T; ++i)
+	{
+		cin >> vec[i];
+	}
+
+	cout << "ì •ë ¬ ì „ : ";
+	Display(vec);
+
+	SelectionSort(vec);
+	cout << "\n";
 
 	return 0;
 }

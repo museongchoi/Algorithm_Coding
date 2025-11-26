@@ -1,37 +1,37 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <vector>
 #include <algorithm>
 
 using namespace std;
 
-void Display(vector<int>& Vec)
+void Display(const vector<int>& vec)
 {
-	for (int i = 0; i < Vec.size(); i++)
+	int n = vec.size();
+	for (int i = 0; i < n; ++i)
 	{
-		cout << Vec[i] << " ";
+		cout << vec[i] << " ";
 	}
 	cout << endl;
 }
 
-// ¼ıÀÚ ¹è¿­ÀÇ ¸ğµç ¿ä¼Ò¸¦ ¾Õ¿¡¼­ºÎÅÍ Â÷·Ê´ë·Î ÀÌ¹Ì Á¤·ÄµÈ ¹è¿­ ºÎºĞ°ú ºñ±³ÇÏ¿©, 
-// ÀÚ½ÅÀÇ À§Ä¡¸¦ Ã£¾Æ »ğÀÔÇÔÀ¸·Î½á Á¤·ÄÀ» ¿Ï¼ºÇÏ´Â ¾Ë°í¸®Áò
+// ìˆ«ì ë°°ì—´ì˜ ëª¨ë“  ìš”ì†Œë¥¼ ì•ì—ì„œë¶€í„° ì°¨ë¡€ëŒ€ë¡œ ì´ë¯¸ ì •ë ¬ëœ ë°°ì—´ ë¶€ë¶„ê³¼ ë¹„êµí•˜ì—¬, 
+// ìì‹ ì˜ ìœ„ì¹˜ë¥¼ ì°¾ì•„ ì‚½ì…í•¨ìœ¼ë¡œì¨ ì •ë ¬ì„ ì™„ì„±í•˜ëŠ” ì•Œê³ ë¦¬ì¦˜
 
-// for¹® ½¬ÇÁÆ® + Á÷Á¢ ´ëÀÔ :: inxkey °ªÀ» »ç¿ë
-void InsertionSort(vector<int>& Vec)
+// forë¬¸ ì‰¬í”„íŠ¸ + ì§ì ‘ ëŒ€ì…
+void InsertionSort_ForShift(vector<int>& vec)
 {
-	int Key;
-	int idxkey;
+	int n = vec.size();
 
-	for (int i = 1; i < Vec.size(); i++)
+	for (int i = 1; i < n; ++i)
 	{
-		Key = Vec[i];
-		idxkey = i;
+		int Key = vec[i];
+		int idxkey = i;
 
-		for (int j = i - 1; j >= 0; j--)
+		for (int j = i - 1; j >= 0; --j)
 		{
-			if (Key < Vec[j])
+			if (vec[j] > Key)
 			{
-				Vec[j + 1] = Vec[j];
+				vec[j + 1] = vec[j];
 				idxkey = j;
 			}
 			else
@@ -39,46 +39,55 @@ void InsertionSort(vector<int>& Vec)
 				break;
 			}
 		}
-		Vec[idxkey] = Key;
-		Display(Vec);
+		vec[idxkey] = Key;
+		Display(vec);
 	}
 }
 
-// while¹® ½¬ÇÁÆ® + Á÷Á¢ ´ëÀÔ 
-void InsertionSort(vector<int>& Vec)
+// whileë¬¸ ì‰¬í”„íŠ¸ + ì§ì ‘ ëŒ€ì… 
+void InsertionSort_WhileShift(vector<int>& vec)
 {
-	int key;
-	int j;
-
-	for (int i = 1; i < Vec.size(); i++)
-	{
-		key = Vec[i];
-		j = i - 1;
-
-		while (j >= 0 && Vec[j] > key)
-		{
-			Display(Vec);
-			Vec[j + 1] = Vec[j];
-			j--;
-		}
-		Vec[j + 1] = key;
-
-		cout << "ÆĞ½º " << i << " ¿Ï·á: ";
-		Display(Vec);
-	}
-}
-
-// swap() ¸¸À» ÀÌ¿ëÇÑ »ğÀÔ Á¤·Ä (Bubble-styled Insertion Sort)
-void InsertionSort(vector<int>& Vec)
-{
-	int n = Vec.size();
+	int n = vec.size();
 
 	for (int i = 1; i < n; ++i)
 	{
-		for (int j = i; j > 0 && Vec[j] < Vec[j - 1]; --j)
+		int key = vec[i];
+		int j = i - 1;
+
+		while (j >= 0 && vec[j] > key)
 		{
-			swap(Vec[j], Vec[j - 1]);
-			Display(Vec);
+			Display(vec);
+			vec[j + 1] = vec[j];
+			--j;
+		}
+		// while ë¬¸ì´ ëë‚œ ì‹œì ì€ ì•ì„œ ì¡°ê±´ì— ë§ëŠ” ê°’ì„ ì°¾ê³  --j ì™¼ìª½ìœ¼ë¡œ í•œ ì¹¸ ì´ë™í•œ ìƒí™©ì´ë‹¤.
+		// ì¦‰, í˜„ì¬ j ê°’ì€ ì¡°ê±´ì— ë§ì§€ ì•Šìœ¼ë¯€ë¡œ whileë¬¸ì´ ì¢…ë£Œëœê²ƒì´ë‹¤.
+		// ì¡°ê±´ì— ë§ì§€ ì•Šìœ¼ë©° ì´ë¯¸ ì™¼ìª½ìœ¼ë¡œ í•œì¹¸ ì´ë™í–ˆìœ¼ë‹ˆ j + 1ë¡œ ì‚½ì…í•  ì›ë˜ ìœ„ì¹˜ë¡œ ë§ì¶°ì¤€ë‹¤.
+		vec[j + 1] = key;
+
+		cout << "íŒ¨ìŠ¤ " << i << " ì™„ë£Œ: ";
+		Display(vec);
+	}
+}
+
+// swap() ë§Œì„ ì´ìš©í•œ ì‚½ì… ì •ë ¬ (Bubble-styled Insertion Sort)
+void InsertionSort(vector<int>& vec)
+{
+	int n = vec.size();
+
+	for (int i = 1; i < n; ++i)
+	{
+		for (int j = i; j > 0; --j)
+		{
+			if (vec[j] < vec[j - 1])
+			{
+				swap(vec[j], vec[j - 1]);
+				Display(vec);
+			}
+			else
+			{
+				break;
+			}
 		}
 	}
 }
@@ -88,12 +97,12 @@ int main()
 	vector<int> vec = { 5, 3, 8, 1, 2, 7 };
 
 	Display(vec);
-	cout << endl << "Á¤·Ä ½ÃÀÛ : " << endl;
+	cout << endl << "ì •ë ¬ ì‹œì‘ : " << endl;
 
-	// ´Ü¼ø ´ëÀÔ
+	// ë‹¨ìˆœ ëŒ€ì…
 	InsertionSort(vec);
 
-	cout << endl << "Á¤·Ä ³¡ : " << endl;
+	cout << endl << "ì •ë ¬ ë : " << endl;
 
 	Display(vec);
 
