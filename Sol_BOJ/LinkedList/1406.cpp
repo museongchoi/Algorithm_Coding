@@ -26,21 +26,21 @@ int main()
 		{
 			if (cursor != li.begin())
 			{
-				cursor--;
+				--cursor;
 			}
 		}
 		else if (cmd == 'D')
 		{
 			if (cursor != li.end())
 			{
-				cursor++;
+				++cursor;
 			}
 		}
 		else if (cmd == 'B')
 		{
 			if (cursor != li.begin())
 			{
-				cursor--;
+				--cursor;
 				cursor = li.erase(cursor);
 			}
 		}
@@ -52,7 +52,7 @@ int main()
 	}
 
 
-	for (cursor = li.begin(); cursor != li.end(); cursor++)
+	for (cursor = li.begin(); cursor != li.end(); ++cursor)
 	{
 		cout << *cursor;
 	}
