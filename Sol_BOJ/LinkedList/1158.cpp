@@ -1,4 +1,95 @@
-﻿// 헤더 큐
+﻿// 원형 연결 리스트 구현
+#include <iostream>
+
+using namespace std;
+
+struct Node {
+	int data;
+	Node* next;
+};
+
+Node* create_node(int val)
+{
+	Node* newNode = new Node;
+	newNode->data = val;
+	newNode->next = nullptr;
+
+	return newNode;
+}
+
+void push_back(Node** head, int val)
+{
+	Node* newNode = create_node(val);
+
+	if (*head == nullptr)
+	{
+		*head = newNode;
+		newNode->next = newNode;
+		return;
+	}
+
+	Node* cur = *head;
+	while (cur->next != *head)
+	{
+		cur = cur->next;
+	}
+	cur->next = newNode;
+	newNode->next = *head;
+}
+
+Node* remove_node(Node* prev, Node* cur)
+{
+	prev->next = cur->next;
+	Node* tmp = cur->next;
+	delete cur;
+	return tmp;
+}
+
+int main()
+{
+	int n, k;
+	cin >> n >> k;
+
+	Node* head = nullptr;
+
+	for (int i = 1; i <= n; ++i)
+	{
+		push_back(&head, i);
+	}
+
+	Node* prev = head;
+	while (prev->next != head)
+	{
+		prev = prev->next;
+	}
+
+	int cnt = 1;
+	Node* cur = head;
+
+	cout << "<";
+
+	while (cur->next != cur)
+	{
+		if (cnt == k)
+		{
+			cout << cur->data << ", ";
+			cur = remove_node(prev, cur);
+			cnt = 1;
+		}
+		else
+		{
+			prev = cur;
+			cur = cur->next;
+			++cnt;
+		}
+	}
+	cout << cur->data << ">";
+	delete cur;
+
+	return 0;
+}
+
+// que 사용
 #include <iostream>
 #include <queue>
 using namespace std;
