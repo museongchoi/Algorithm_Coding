@@ -91,7 +91,154 @@ int main()
 	return 0;
 }
 
-// stack 구현
+// stack 구현 (ver.2)
+#include <iostream>
+
+using namespace std;
+
+struct Node
+{
+	int data;
+	Node* link;
+};
+
+struct Stack {
+	Node* St;
+
+	Stack() : St(nullptr) {}
+	~Stack() { Clear(); }
+
+	void Push(int value)
+	{
+		Node* newNode = new Node;
+		newNode->data = value;
+		newNode->link = St;
+
+		St = newNode;
+	}
+
+	void Pop()
+	{
+		if (St == nullptr)
+		{
+			cout << -1 << "\n";
+			return;
+		}
+
+		cout << St->data << "\n";
+
+		Node* tmp = St;
+		St = St->link;
+		delete tmp;
+	}
+
+	void Size()
+	{
+		Node* cur = St;
+		int cnt = 0;
+		while (cur != nullptr)
+		{
+			++cnt;
+			cur = cur->link;
+		}
+
+		cout << cnt << "\n";
+	}
+
+	bool Empty()
+	{
+		if (St == nullptr)
+		{
+			return 1;
+		}
+		return 0;
+	}
+
+	void Top()
+	{
+		if (Empty())
+		{
+			cout << -1 << "\n";
+			return;
+		}
+		cout << St->data << "\n";
+	}
+
+	void Clear()
+	{
+		while (St)
+		{
+			Node* tmp = St;
+			St = St->link;
+			delete tmp;
+		}
+	}
+};
+
+enum Cmd
+{
+	push,
+	pop,
+	size,
+	empty,
+	top,
+	unknown
+};
+
+Cmd ToCmd(string st)
+{
+	if (st == "push") return Cmd::push;
+	if (st == "pop") return Cmd::pop;
+	if (st == "size") return Cmd::size;
+	if (st == "empty") return Cmd::empty;
+	if (st == "top") return Cmd::top;
+	return Cmd::unknown;
+}
+
+int main()
+{
+	ios::sync_with_stdio(false);
+	cin.tie(nullptr);
+
+	Stack st;
+
+	int n;
+	cin >> n;
+
+	for (int i = 0; i < n; ++i)
+	{
+		string cmd;
+		int val;
+
+		cin >> cmd;
+
+		switch (ToCmd(cmd))
+		{
+		case Cmd::push:
+			cin >> val;
+			st.Push(val);
+			break;
+		case Cmd::pop:
+			st.Pop();
+			break;
+		case Cmd::size:
+			st.Size();
+			break;
+		case Cmd::empty:
+			cout << st.Empty() << "\n";
+			break;
+		case Cmd::top:
+			st.Top();
+			break;
+		default:
+			break;
+		}
+	}
+
+	return 0;
+}
+
+// stack 구현 (ver.1)
 #include <iostream>
 #include <string>
 #include <vector>

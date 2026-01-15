@@ -1,4 +1,66 @@
-﻿// list
+﻿// List ver.switch
+#include <iostream>
+#include <string>
+#include <list>
+
+using namespace std;
+
+int main()
+{
+	string st;
+	cin >> st;
+
+	list<char> li(st.begin(), st.end());
+	auto cursor = li.end();
+
+	int n;
+	cin >> n;
+
+	for (int i = 0; i < n; ++i)
+	{
+		char cmd;
+		char val;
+		cin >> cmd;
+
+		switch (cmd)
+		{
+		case 'L':
+			if (cursor != li.begin())
+			{
+				--cursor;
+			}
+			break;
+		case 'D':
+			if (cursor != li.end())
+			{
+				++cursor;
+			}
+			break;
+		case 'B':
+			if (cursor != li.begin())
+			{
+				--cursor;
+				cursor = li.erase(cursor);
+			}
+			break;
+		case 'P':
+			cin >> val;
+			li.insert(cursor, val);
+			break;
+		default:
+			break;
+		}
+	}
+
+	for (auto cur : li)
+	{
+		cout << cur;
+	}
+
+	return 0;
+}
+
+// List ver.if
 #include <iostream>
 #include <string>
 #include <list>

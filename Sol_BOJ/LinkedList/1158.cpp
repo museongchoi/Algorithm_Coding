@@ -34,15 +34,15 @@ void push_back(Node** head, int val)
 		cur = cur->next;
 	}
 	cur->next = newNode;
-	newNode->next = *head;
+	newNode->next = *head; // 마지막 노드가 다시 head를 가리킴
 }
 
 Node* remove_node(Node* prev, Node* cur)
 {
-	prev->next = cur->next;
-	Node* tmp = cur->next;
-	delete cur;
-	return tmp;
+	prev->next = cur->next; // cur을 건너뛰도록 연결 변경
+	Node* tmp = cur->next;  // 다음 노드 저장
+	delete cur;             // 현재 노드 제거
+	return tmp;             // 순회를 이어가기 위해 반환
 }
 
 int main()
